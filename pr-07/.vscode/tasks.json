@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Зібрати практичну 7",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "Practice7.csproj"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Запустити практичну 7",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "Practice7.csproj"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
