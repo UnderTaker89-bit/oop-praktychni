@@ -1,0 +1,10 @@
+using Practice14;
+Console.OutputEncoding=System.Text.Encoding.UTF8;
+var original=new Book("Алгоритми","Дональд Кнут",1968,new Publisher("Видавництво А"));
+var copied=new Book(original);var shallow=(Book)original.Clone();var deep=original.DeepClone();
+original.Title="Нова назва";original.Publisher.Name="Видавництво Б";
+Console.WriteLine("Практична 14 — копіювання Book");
+Console.WriteLine("Оригінал: "+original);Console.WriteLine("Конструктор копій: "+copied);Console.WriteLine("Поверхнева копія: "+shallow);Console.WriteLine("Глибока копія: "+deep);
+Console.WriteLine($"Спільний Publisher поверхневої копії: {ReferenceEquals(original.Publisher,shallow.Publisher)}");
+Console.WriteLine($"Спільний Publisher глибокої копії: {ReferenceEquals(original.Publisher,deep.Publisher)}");
+Console.WriteLine("Рядок Title замінено лише в оригіналі. Вкладений Publisher змінено також у поверхневій копії, бо посилання спільне.");
