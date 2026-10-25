@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Зібрати практичну 42",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "Practice42.csproj"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Запустити практичну 42",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "Practice42.csproj"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
