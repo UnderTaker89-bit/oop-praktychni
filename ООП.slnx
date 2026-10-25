@@ -1,0 +1,24 @@
+<Solution>
+<Project Path="pr-03-04/Practice3_4.csproj" />
+<Project Path="pr-07/Practice7.csproj" />
+<Project Path="pr-10/Practice10.csproj" />
+<Project Path="pr-12/Practice12.csproj" />
+<Project Path="pr-14/Practice14.csproj" />
+<Project Path="pr-15/Practice15.csproj" />
+<Project Path="pr-17/Practice17.csproj" />
+<Project Path="pr-19/Practice19.csproj" />
+<Project Path="pr-33/Practice33.csproj" />
+<Project Path="pr-37/Practice37.csproj" />
+<Project Path="pr-42/Practice42.csproj" />
+<Project Path="pr-47/Practice47.csproj" />
+<Project Path="pr-51/Practice51.csproj" />
+<Project Path="pr-31-32/Delivery.Core/Delivery.Core.csproj" />
+<Project Path="pr-31-32/Delivery.WindowsApp/Delivery.WindowsApp.csproj" />
+<Project Path="pr-46/PostService.Models/PostService.Models.csproj" />
+<Project Path="pr-46/PostService.Dtos/PostService.Dtos.csproj" />
+<Project Path="pr-46/PostService.Business/PostService.Business.csproj" />
+<Project Path="pr-46/PostService.DataAccess/PostService.DataAccess.csproj" />
+<Project Path="pr-46/PostService/PostService.csproj" />
+<Project Path="pr-46/PostService.Client/PostService.Client.csproj" />
+<Project Path="pr-46/PostService.WindowsApp/PostService.WindowsApp.csproj" />
+</Solution>

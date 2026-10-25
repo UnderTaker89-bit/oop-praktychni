@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Зібрати практичну 3-4",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "Practice3_4.csproj"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Запустити практичну 3-4",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "Practice3_4.csproj"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
