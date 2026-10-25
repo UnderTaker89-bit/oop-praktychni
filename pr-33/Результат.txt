@@ -1,0 +1,8 @@
+Практична 33 — узагальнені методи без LINQ
+Числа: 7, 2, 9, 2, 4
+IndexOf(2) = 1, Min = 2, Max = 9
+Навпаки: 4, 2, 9, 2, 7
+Рядки: banana, apple, pear, apple
+IndexOf(apple) = 1, Min = apple, Max = pear
+Навпаки: apple, pear, apple, banana
+Відсутній елемент: -1
