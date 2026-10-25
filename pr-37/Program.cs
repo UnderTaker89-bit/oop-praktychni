@@ -1,0 +1,14 @@
+using Practice37;
+Console.OutputEncoding=System.Text.Encoding.UTF8;
+Console.WriteLine("Практична 37 — узагальнений репозиторій");
+IRepository<Posting> postings=new GenericRepository<Posting>();
+int p1=postings.Add(new Posting{TrackingNumber="UA001",Weight=2,FromAddress="Київ",ToAddress="Львів"});
+int p2=postings.Add(new Posting{TrackingNumber="UA002",Weight=3,FromAddress="Одеса",ToAddress="Дніпро"});
+Console.WriteLine("Отримано: "+postings.GetById(p1));
+postings.Update(new Posting{Id=p1,TrackingNumber="UA001",Weight=2,FromAddress="Київ",ToAddress="Львів",Status="Доставлено"});postings.Delete(p2);
+foreach(var item in postings.GetAll())Console.WriteLine(item);
+IRepository<ContactPerson> contacts=new GenericRepository<ContactPerson>();int c1=contacts.Add(new ContactPerson{Name="Юрій",Phone="+380671234567",Email="yurii@example.com"});int c2=contacts.Add(new ContactPerson{Name="Олена",Phone="+380501234567",Email="olena@example.com"});
+Console.WriteLine("Отримано: "+contacts.GetById(c1));contacts.Update(new ContactPerson{Id=c1,Name="Юрій Коваль",Phone="+380671234567",Email="yurii@example.com"});contacts.Delete(c2);
+foreach(var item in contacts.GetAll())Console.WriteLine(item);
+Console.WriteLine($"Відправлень: {postings.GetAll().Count}; контактів: {contacts.GetAll().Count}");
+Console.WriteLine($"Інший екземпляр репозиторію бачить відправлень: {new GenericRepository<Posting>().GetAll().Count}");
