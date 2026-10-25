@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Зібрати практичну 19",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "Practice19.csproj"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Запустити практичну 19",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "Practice19.csproj"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
