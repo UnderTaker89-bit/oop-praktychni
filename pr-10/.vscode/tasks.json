@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Зібрати практичну 10",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "Practice10.csproj"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Запустити практичну 10",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "Practice10.csproj"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
