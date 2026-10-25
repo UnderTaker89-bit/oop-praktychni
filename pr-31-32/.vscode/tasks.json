@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Зібрати практичну 31-32",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "Практична.slnx"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Розрахунок доставки",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "Delivery.WindowsApp/Delivery.WindowsApp.csproj"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

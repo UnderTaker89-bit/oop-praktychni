@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Розрахунок доставки",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "${workspaceFolder}/Delivery.WindowsApp/bin/Debug/net10.0-windows/Delivery.WindowsApp.dll",
+      "cwd": "${workspaceFolder}/Delivery.WindowsApp",
+      "console": "internalConsole"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Запуск практичної",
+      "configurations": [
+        "Розрахунок доставки"
+      ],
+      "stopAll": true
+    }
+  ]
+}
