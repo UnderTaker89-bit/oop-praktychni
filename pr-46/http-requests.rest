@@ -1,0 +1,24 @@
+@host = http://localhost:5211
+### Перелік відправлень; при зупиненому сервері з’єднання не встановлюється
+GET {{host}}/postings
+### Неіснуючий запис — 404
+GET {{host}}/postings/2147483647
+### Некоректні дані — 400 і словник errors
+POST {{host}}/postings
+Content-Type: application/json
+
+{"from":"","to":"Олена","content":"Книги","deliveryType":"Standard","weight":0,"width":20,"height":10,"depth":30,"value":500}
+### Створення — 201
+POST {{host}}/postings
+Content-Type: application/json
+
+{"from":"Іван","to":"Олена","content":"Книги","deliveryType":"Standard","weight":2,"width":20,"height":10,"depth":30,"value":500}
+### Редагування; підставити Id зі створеного запису
+PUT {{host}}/postings/1
+Content-Type: application/json
+
+{"from":"Іван","to":"Олена","content":"Зошити","deliveryType":"Standard","weight":2,"width":20,"height":10,"depth":30,"value":500}
+### Видалення — 204, повторне видалення — 404
+DELETE {{host}}/postings/1
+### Перевірка 500: запустити сервер з параметром --SimulateServerError=true
+GET {{host}}/postings

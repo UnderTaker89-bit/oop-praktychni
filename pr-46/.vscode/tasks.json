@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Зібрати практичну 46",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "Практична.slnx"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Сервер PostService",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "PostService/PostService.csproj"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Windows Forms клієнт",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "PostService.WindowsApp/PostService.WindowsApp.csproj"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
